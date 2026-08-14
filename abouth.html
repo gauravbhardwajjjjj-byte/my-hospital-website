@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LifeCare Hospital | About Us</title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #263238;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            background: #0b7285;
+            color: white;
+            padding: 9px 0;
+            font-size: 14px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .top-info {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        .nav-container {
+            min-height: 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+
+            background: #0b7285;
+            color: white;
+
+            border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo-text h2 {
+            color: #0b7285;
+            font-size: 23px;
+        }
+
+        .logo-text span {
+            color: #777;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+
+            list-style: none;
+
+            gap: 28px;
+        }
+
+        .nav-menu a {
+            font-size: 15px;
+            font-weight: 600;
+
+            color: #37474f;
+
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #0b7285;
+        }
+
+        .appointment-btn {
+            background: #0b7285;
+
+            color: white !important;
+
+            padding: 11px 18px;
+
+            border-radius: 7px;
+        }
+
+        .appointment-btn:hover {
+            background: #075968;
+        }
+
+        .menu-toggle {
+            display: none;
+
+            font-size: 28px;
+
+            cursor: pointer;
+
+            color: #0b7285;
+        }
+
+
+        /* =========================
+           PAGE HERO
+        ========================= */
+
+        .page-hero {
+
+            min-height: 330px;
+
+            background:
+                linear-gradient(
+                    rgba(5, 56, 68, 0.78),
+                    rgba(5, 56, 68, 0.78)
+                ),
+
+                url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80")
+                center/cover no-repeat;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .page-hero-content {
+            max-width: 750px;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(38px, 6vw, 58px);
+
+            margin-bottom: 12px;
+        }
+
+        .page-hero p {
+            font-size: 17px;
+
+            color: #e5f6f8;
+        }
+
+
+        /* =========================
+           COMMON SECTION
+        ========================= */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .section-heading .subtitle {
+            color: #0b7285;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            font-size: 14px;
+        }
+
+        .section-heading h2 {
+            font-size: 36px;
+
+            margin: 8px 0 12px;
+
+            color: #263238;
+        }
+
+        .section-heading p {
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #777;
+        }
+
+
+        /* =========================
+           ABOUT INTRODUCTION
+        ========================= */
+
+        .about-intro {
+            background: #ffffff;
+        }
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+
+            width: 100%;
+
+            height: 450px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+        }
+
+        .experience-box {
+
+            position: absolute;
+
+            bottom: -20px;
+
+            right: -20px;
+
+            background: #0b7285;
+
+            color: white;
+
+            padding: 20px 25px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .experience-box strong {
+
+            display: block;
+
+            font-size: 32px;
+        }
+
+        .about-content h2 {
+
+            font-size: 36px;
+
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+
+            color: #666;
+
+            margin-bottom: 15px;
+        }
+
+        .check-list {
+
+            list-style: none;
+
+            margin: 20px 0;
+        }
+
+        .check-list li {
+
+            margin: 11px 0;
+
+            color: #455a64;
+        }
+
+        .check-list li::before {
+
+            content: "✓";
+
+            color: #0b7285;
+
+            font-weight: bold;
+
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 13px 24px;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+
+            background: #0b7285;
+
+            color: white;
+        }
+
+        .btn-primary:hover {
+
+            background: #075968;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MISSION & VISION
+        ========================= */
+
+        .mission-section {
+
+            background: #f7fbfc;
+        }
+
+        .mission-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+        .mission-card {
+
+            background: white;
+
+            padding: 40px 35px;
+
+            border-radius: 14px;
+
+            text-align: center;
+
+            border: 1px solid #e6eeee;
+
+            transition: 0.3s;
+        }
+
+        .mission-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.09);
+        }
+
+        .mission-icon {
+
+            width: 70px;
+
+            height: 70px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            background: #e5f6f8;
+
+            color: #0b7285;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 32px;
+        }
+
+        .mission-card h3 {
+
+            font-size: 24px;
+
+            margin-bottom: 12px;
+
+            color: #0b7285;
+        }
+
+        .mission-card p {
+
+            color: #777;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           VALUES
+        ========================= */
+
+        .values-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 22px;
+        }
+
+        .value-card {
+
+            padding: 30px 20px;
+
+            background: white;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            border: 1px solid #e7eeee;
+
+            transition: 0.3s;
+        }
+
+        .value-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .value-icon {
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+        .value-card h3 {
+
+            margin-bottom: 10px;
+
+            color: #263238;
+        }
+
+        .value-card p {
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           STATISTICS
+        ========================= */
+
+        .stats {
+
+            background: #0b7285;
+
+            color: white;
+        }
+
+        .stats-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+            text-align: center;
+        }
+
+        .stat-item {
+
+            padding: 20px;
+        }
+
+        .stat-item .number {
+
+            font-size: 42px;
+
+            font-weight: bold;
+
+            display: block;
+        }
+
+        .stat-item p {
+
+            font-size: 15px;
+
+            opacity: 0.9;
+        }
+
+
+        /* =========================
+           FACILITIES
+        ========================= */
+
+        .facilities {
+
+            background: #f7fbfc;
+        }
+
+        .facilities-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 35px;
+
+            align-items: center;
+        }
+
+        .facility-image img {
+
+            width: 100%;
+
+            height: 400px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+        }
+
+        .facility-list {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 18px;
+        }
+
+        .facility-item {
+
+            background: white;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            border-left: 4px solid #0b7285;
+        }
+
+        .facility-item h3 {
+
+            font-size: 17px;
+
+            margin-bottom: 5px;
+        }
+
+        .facility-item p {
+
+            color: #777;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+
+            background:
+                linear-gradient(
+                    rgba(11,114,133,0.93),
+                    rgba(11,114,133,0.93)
+                ),
+
+                url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .cta h2 {
+
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+
+            max-width: 650px;
+
+            margin: 0 auto 25px;
+
+            color: #eefbfc;
+        }
+
+        .btn-light {
+
+            background: white;
+
+            color: #0b7285;
+        }
+
+        .btn-light:hover {
+
+            background: #e9f7f9;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background: #172f35;
+
+            color: white;
+
+            padding-top: 60px;
+        }
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1.5fr;
+
+            gap: 40px;
+
+            padding-bottom: 40px;
+        }
+
+        .footer-col h3 {
+
+            margin-bottom: 18px;
+
+            color: #8ce1eb;
+        }
+
+        .footer-col p {
+
+            color: #c4d1d4;
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+
+            list-style: none;
+        }
+
+        .footer-links li {
+
+            margin-bottom: 9px;
+        }
+
+        .footer-links a {
+
+            color: #c4d1d4;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+
+            color: white;
+        }
+
+        .footer-bottom {
+
+            border-top:
+                1px solid rgba(255,255,255,0.1);
+
+            text-align: center;
+
+            padding: 18px;
+
+            color: #b6c6c9;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           BACK TO TOP
+        ========================= */
+
+        #backToTop {
+
+            position: fixed;
+
+            right: 20px;
+
+            bottom: 20px;
+
+            width: 45px;
+
+            height: 45px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #0b7285;
+
+            color: white;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            display: none;
+
+            z-index: 999;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.2);
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 992px) {
+
+            .nav-menu {
+                gap: 15px;
+            }
+
+            .about-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .values-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .stats-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .facilities-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .footer-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .top-bar {
+
+                display: none;
+            }
+
+            .nav-container {
+
+                min-height: 65px;
+            }
+
+            .menu-toggle {
+
+                display: block;
+            }
+
+            .nav-menu {
+
+                position: absolute;
+
+                top: 65px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: white;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 0;
+
+                padding: 10px 5%;
+
+                box-shadow:
+                    0 8px 15px rgba(0,0,0,0.1);
+
+                display: none;
+            }
+
+            .nav-menu.show {
+
+                display: flex;
+            }
+
+            .nav-menu li {
+
+                width: 100%;
+
+                border-bottom:
+                    1px solid #eee;
+            }
+
+            .nav-menu a {
+
+                display: block;
+
+                padding: 13px 0;
+            }
+
+            .appointment-btn {
+
+                display: inline-block !important;
+
+                margin: 7px 0;
+            }
+
+            .page-hero {
+
+                min-height: 280px;
+            }
+
+            .page-hero h1 {
+
+                font-size: 40px;
+            }
+
+            section {
+
+                padding: 60px 0;
+            }
+
+            .section-heading h2 {
+
+                font-size: 30px;
+            }
+
+            .mission-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .facility-list {
+
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+
+                height: 350px;
+            }
+
+            .experience-box {
+
+                right: 10px;
+
+                bottom: -20px;
+            }
+
+            .cta h2 {
+
+                font-size: 30px;
+            }
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            .container {
+
+                width: 92%;
+            }
+
+            .logo-text h2 {
+
+                font-size: 19px;
+            }
+
+            .logo-icon {
+
+                width: 40px;
+
+                height: 40px;
+
+                font-size: 22px;
+            }
+
+            .page-hero {
+
+                min-height: 250px;
+            }
+
+            .page-hero h1 {
+
+                font-size: 34px;
+            }
+
+            .page-hero p {
+
+                font-size: 15px;
+            }
+
+            .about-content h2 {
+
+                font-size: 29px;
+            }
+
+            .about-image img {
+
+                height: 300px;
+            }
+
+            .experience-box {
+
+                position: relative;
+
+                right: auto;
+
+                bottom: auto;
+
+                width: 80%;
+
+                margin: -30px auto 0;
+            }
+
+            .stats-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .stat-item .number {
+
+                font-size: 30px;
+            }
+
+            .facility-image img {
+
+                height: 300px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <div class="top-bar">
+
+        <div class="container top-bar-content">
+
+            <div class="top-info">
+
+                <span>
+                    📞 Emergency: +91 98765 43210
+                </span>
+
+                <span>
+                    ✉ info@lifecarehospital.com
+                </span>
+
+            </div>
+
+            <div>
+                24 × 7 Emergency Services Available
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="container nav-container">
+
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    ✚
+                </div>
+
+                <div class="logo-text">
+
+                    <h2>
+                        LifeCare
+                    </h2>
+
+                    <span>
+                        HOSPITAL & HEALTHCARE
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <div class="menu-toggle" id="menuToggle">
+                ☰
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <ul class="nav-menu" id="navMenu">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="abouth.html" class="active">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="doctors.html">
+                        Doctors
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contacth.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="bookappointment.html"
+                       class="appointment-btn">
+                        Book Appointment
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         PAGE HERO
+    ========================== -->
+
+    <section class="page-hero">
+
+        <div class="container">
+
+            <div class="page-hero-content">
+
+                <h1>
+                    About LifeCare Hospital
+                </h1>
+
+                <p>
+                    Compassionate care, modern healthcare,
+                    and a commitment to your well-being.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT INTRODUCTION
+    ========================== -->
+
+    <section class="about-intro">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+
+                <div class="about-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1000&q=80"
+                    alt="LifeCare Hospital Building">
+
+                    <div class="experience-box">
+
+                        <strong>
+                            15+
+                        </strong>
+
+                        Years of Excellence
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="about-content">
+
+                    <div class="section-heading"
+                         style="text-align:left; margin-bottom:20px;">
+
+                        <div class="subtitle">
+                            Who We Are
+                        </div>
+
+                        <h2>
+                            Dedicated To Providing
+                            Quality Healthcare
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+                        LifeCare Hospital is a modern healthcare
+                        institution dedicated to providing high-quality
+                        medical services in a safe, comfortable, and
+                        patient-friendly environment.
+                    </p>
+
+
+                    <p>
+                        Our hospital brings together experienced doctors,
+                        skilled nurses, trained healthcare professionals,
+                        and modern medical facilities to deliver
+                        comprehensive healthcare services.
+                    </p>
+
+
+                    <p>
+                        We believe that healthcare is not only about
+                        treating illness but also about understanding
+                        patients, supporting their families, and helping
+                        people lead healthier lives.
+                    </p>
+
+
+                    <ul class="check-list">
+
+                        <li>
+                            Experienced medical professionals
+                        </li>
+
+                        <li>
+                            Modern healthcare facilities
+                        </li>
+
+                        <li>
+                            Patient-centered approach
+                        </li>
+
+                        <li>
+                            Safe and comfortable environment
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MISSION & VISION
+    ========================== -->
+
+    <section class="mission-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <div class="subtitle">
+                    Our Purpose
+                </div>
+
+                <h2>
+                    Mission & Vision
+                </h2>
+
+                <p>
+                    Our goal is to create a healthcare environment
+                    based on trust, compassion, and excellence.
+                </p>
+
+            </div>
+
+
+
+            <div class="mission-grid">
+
+
+                <div class="mission-card">
+
+                    <div class="mission-icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        Our Mission
+                    </h3>
+
+                    <p>
+                        To provide accessible, reliable, and quality
+                        healthcare services while treating every
+                        patient with dignity, respect, and compassion.
+                    </p>
+
+                </div>
+
+
+
+                <div class="mission-card">
+
+                    <div class="mission-icon">
+                        👁️
+                    </div>
+
+                    <h3>
+                        Our Vision
+                    </h3>
+
+                    <p>
+                        To become a trusted healthcare destination
+                        known for medical excellence, modern technology,
+                        compassionate care, and positive patient
+                        experiences.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CORE VALUES
+    ========================== -->
+
+    <section>
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <div class="subtitle">
+                    Our Values
+                </div>
+
+                <h2>
+                    What We Believe In
+                </h2>
+
+                <p>
+                    Our core values guide the way we care for
+                    our patients and work with our community.
+                </p>
+
+            </div>
+
+
+
+            <div class="values-grid">
+
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        ❤️
+                    </div>
+
+                    <h3>
+                        Compassion
+                    </h3>
+
+                    <p>
+                        We treat every patient with kindness,
+                        empathy, and respect.
+                    </p>
+
+                </div>
+
+
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        ⭐
+                    </div>
+
+                    <h3>
+                        Excellence
+                    </h3>
+
+                    <p>
+                        We continuously work toward high standards
+                        in healthcare and patient service.
+                    </p>
+
+                </div>
+
+
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Trust
+                    </h3>
+
+                    <p>
+                        We build strong relationships through
+                        honesty and responsible care.
+                    </p>
+
+                </div>
+
+
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        🔬
+                    </div>
+
+                    <h3>
+                        Innovation
+                    </h3>
+
+                    <p>
+                        We embrace modern technology and improved
+                        healthcare practices.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         STATISTICS
+    ========================== -->
+
+    <section class="stats">
+
+        <div class="container">
+
+            <div class="stats-grid">
+
+
+                <div class="stat-item">
+
+                    <span class="number">
+                        15+
+                    </span>
+
+                    <p>
+                        Years of Experience
+                    </p>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <span class="number">
+                        50+
+                    </span>
+
+                    <p>
+                        Expert Doctors
+                    </p>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <span class="number">
+                        20+
+                    </span>
+
+                    <p>
+                        Medical Specialists
+                    </p>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <span class="number">
+                        10K+
+                    </span>
+
+                    <p>
+                        Patients Served
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FACILITIES
+    ========================== -->
+
+    <section class="facilities">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <div class="subtitle">
+                    Our Facilities
+                </div>
+
+                <h2>
+                    Designed For Better Patient Care
+                </h2>
+
+                <p>
+                    We provide modern facilities designed to make
+                    healthcare more comfortable and convenient.
+                </p>
+
+            </div>
+
+
+
+            <div class="facilities-grid">
+
+
+                <div class="facility-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1516841273335-e39b37888115?auto=format&fit=crop&w=1000&q=80"
+                    alt="Hospital Facility">
+
+                </div>
+
+
+
+                <div class="facility-list">
+
+
+                    <div class="facility-item">
+
+                        <h3>
+                            🏥 Modern Patient Rooms
+                        </h3>
+
+                        <p>
+                            Comfortable and clean rooms
+                            for patient care.
+                        </p>
+
+                    </div>
+
+
+                    <div class="facility-item">
+
+                        <h3>
+                            🚑 Emergency Services
+                        </h3>
+
+                        <p>
+                            Emergency healthcare support
+                            available 24 × 7.
+                        </p>
+
+                    </div>
+
+
+                    <div class="facility-item">
+
+                        <h3>
+                            🔬 Diagnostic Laboratory
+                        </h3>
+
+                        <p>
+                            Modern facilities for diagnostic
+                            testing and reports.
+                        </p>
+
+                    </div>
+
+
+                    <div class="facility-item">
+
+                        <h3>
+                            💊 Pharmacy Support
+                        </h3>
+
+                        <p>
+                            Convenient access to prescribed
+                            medicines and healthcare support.
+                        </p>
+
+                    </div>
+
+
+                    <div class="facility-item">
+
+                        <h3>
+                            🩺 Advanced Equipment
+                        </h3>
+
+                        <p>
+                            Modern medical equipment for
+                            effective healthcare services.
+                        </p>
+
+                    </div>
+
+
+                    <div class="facility-item">
+
+                        <h3>
+                            👨‍⚕️ Expert Medical Team
+                        </h3>
+
+                        <p>
+                            Qualified professionals dedicated
+                            to patient care.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>
+                Your Health Matters To Us
+            </h2>
+
+            <p>
+                Get in touch with our healthcare team or schedule
+                an appointment with one of our experienced doctors.
+            </p>
+
+            <a href="appointment.html"
+               class="btn btn-light">
+
+                Book an Appointment
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-col">
+
+                    <h3>
+                        LifeCare Hospital
+                    </h3>
+
+                    <p>
+                        Providing quality healthcare with compassion,
+                        advanced facilities, and experienced medical
+                        professionals.
+                    </p>
+
+                    <p>
+                        📞 +91 98765 43210
+                    </p>
+
+                    <p>
+                        ✉ info@lifecarehospital.com
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-col">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="doctors.html">
+                                Doctors
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="appointment.html">
+                                Book Appointment
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="footer-col">
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <p>
+                        📍 Main Hospital Road,
+                        New Delhi, India
+                    </p>
+
+                    <p>
+                        📞 +91 98765 43210
+                    </p>
+
+                    <p>
+                        ✉ info@lifecarehospital.com
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-col">
+
+                    <h3>
+                        Opening Hours
+                    </h3>
+
+                    <p>
+                        Monday - Friday:
+                        8:00 AM - 8:00 PM
+                    </p>
+
+                    <p>
+                        Saturday:
+                        9:00 AM - 6:00 PM
+                    </p>
+
+                    <p>
+                        Sunday:
+                        Emergency Only
+                    </p>
+
+                    <p>
+                        <strong>
+                            Emergency: 24 × 7
+                        </strong>
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © <span id="year"></span>
+            LifeCare Hospital.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
+
+    <button id="backToTop" title="Go to top">
+        ↑
+    </button>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navMenu =
+            document.getElementById("navMenu");
+
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("show");
+
+
+            if (navMenu.classList.contains("show")) {
+
+                menuToggle.innerHTML = "✕";
+
+            } else {
+
+                menuToggle.innerHTML = "☰";
+
+            }
+
+        });
+
+
+
+        /* =========================
+           CLOSE MENU AFTER CLICK
+        ========================= */
+
+        const navLinks =
+            document.querySelectorAll(".nav-menu a");
+
+
+        navLinks.forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navMenu.classList.remove("show");
+
+                menuToggle.innerHTML = "☰";
+
+            });
+
+        });
+
+
+
+        /* =========================
+           CURRENT YEAR
+        ========================= */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+
+        /* =========================
+           BACK TO TOP
+        ========================= */
+
+        const backToTop =
+            document.getElementById("backToTop");
+
+
+        window.addEventListener("scroll", function() {
+
+            if (window.scrollY > 400) {
+
+                backToTop.style.display = "block";
+
+            } else {
+
+                backToTop.style.display = "none";
+
+            }
+
+        });
+
+
+        backToTop.addEventListener("click", function() {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
